@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/payment_helpPage"
+    tools:context=".HelpPages.PaymentInquiresHelpPage">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent=".07"
+        android:elevation="4dp"
+        android:background="@drawable/actionbar_bg"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintTop_toTopOf="@+id/payment_helpPage"
+        app:layout_constraintStart_toStartOf="@+id/payment_helpPage"
+        app:layout_constraintEnd_toEndOf="@+id/payment_helpPage"
+        app:layout_constraintBottom_toBottomOf="@+id/payment_helpPage">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Help"
+            android:fontFamily="@font/orange_juice"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            app:layout_constraintTop_toTopOf="@+id/action_bar"
+            app:layout_constraintStart_toStartOf="@+id/action_bar"
+            app:layout_constraintEnd_toEndOf="@+id/action_bar"
+            app:layout_constraintBottom_toBottomOf="@+id/action_bar"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/background_img"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:src="@drawable/login_registration_background"
+        android:scaleType="centerCrop"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintlayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        app:layout_constraintHeight_percent=".9"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/page_viewer_bg">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/page_action_bar"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent=".07"
+            android:elevation="4dp"
+            android:background="@drawable/page_viewer_bg"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintTop_toTopOf="@+id/constraintlayout"
+            app:layout_constraintStart_toStartOf="@+id/constraintlayout"
+            app:layout_constraintEnd_toEndOf="@+id/constraintlayout"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintlayout">
+
+            <ImageView
+                android:id="@+id/backbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_back"
+                app:layout_constraintHorizontal_bias=".02"
+                app:layout_constraintTop_toTopOf="@+id/page_action_bar"
+                app:layout_constraintStart_toStartOf="@+id/page_action_bar"
+                app:layout_constraintEnd_toEndOf="@+id/page_action_bar"
+                app:layout_constraintBottom_toBottomOf="@+id/page_action_bar"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payment Inquires"
+                android:textSize="25sp"
+                android:fontFamily="sans-serif-thin"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                app:layout_constraintTop_toTopOf="@+id/page_action_bar"
+                app:layout_constraintStart_toStartOf="@+id/page_action_bar"
+                app:layout_constraintEnd_toEndOf="@+id/page_action_bar"
+                app:layout_constraintBottom_toBottomOf="@+id/page_action_bar"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintHeight_percent=".9"
+            app:layout_constraintTop_toBottomOf="@id/page_action_bar"
+            app:layout_constraintStart_toStartOf="@+id/constraintlayout"
+            app:layout_constraintEnd_toEndOf="@+id/constraintlayout"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintlayout">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/page_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="15dp"
+                app:layout_constraintTop_toTopOf="@+id/scrollView"
+                app:layout_constraintStart_toStartOf="@+id/scrollView"
+                app:layout_constraintEnd_toEndOf="@+id/scrollView"
+                app:layout_constraintBottom_toBottomOf="@+id/scrollView">
+
+                <TextView
+                    android:id="@+id/info_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Please feel free to give the developer of this app any and all the money that you may have at any particular time :)"
+                    android:textSize="18sp"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintTop_toTopOf="@id/page_content"
+                    app:layout_constraintStart_toStartOf="@id/page_content"
+                    app:layout_constraintEnd_toEndOf="@id/page_content"
+                    app:layout_constraintBottom_toBottomOf="@id/page_content"/>
+
+                <TextView
+                    android:id="@+id/helpful_question"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Was this helpful ?"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    app:layout_constraintTop_toBottomOf="@id/info_text"
+                    app:layout_constraintStart_toStartOf="@id/page_content"
+                    app:layout_constraintEnd_toEndOf="@id/page_content"
+                    app:layout_constraintBottom_toTopOf="@id/fromTxt"/>
+
+                <LinearLayout
+                    android:id="@+id/rating"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginBottom="20dp"
+                    app:layout_constraintTop_toBottomOf="@id/helpful_question"
+                    app:layout_constraintStart_toStartOf="@id/page_content"
+                    app:layout_constraintEnd_toEndOf="@id/page_content"
+                    app:layout_constraintBottom_toTopOf="@id/fromTxt">
+
+                    <Button
+                        android:id="@+id/likebtn"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="Yes"
+                        android:textAllCaps="false"
+                        android:background="@drawable/rating_btn_bg"
+                        android:layout_marginRight="60dp"/>
+
+                    <Button
+                        android:id="@+id/dislikebtn"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="No"
+                        android:textAllCaps="false"
+                        android:background="@drawable/rating_btn_bg"/>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/fromTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="From"
+                    app:layout_constraintTop_toBottomOf="@+id/rating"
+                    app:layout_constraintBottom_toTopOf="@+id/appName_txt"
+                    app:layout_constraintEnd_toEndOf="@id/page_content"
+                    app:layout_constraintStart_toStartOf="@id/page_content" />
+
+                <TextView
+                    android:id="@+id/appName_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/orange_juice"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintTop_toBottomOf="@+id/fromTxt"
+                    app:layout_constraintBottom_toBottomOf="@id/page_content"
+                    app:layout_constraintStart_toStartOf="@id/page_content"
+                    app:layout_constraintEnd_toEndOf="@id/page_content"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

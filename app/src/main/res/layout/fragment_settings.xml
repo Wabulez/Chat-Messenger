@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/settings_window"
+    tools:context=".MainActivityPages.SettingsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent=".07"
+        android:elevation="4dp"
+        android:background="@drawable/actionbar_bg"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintTop_toTopOf="@+id/settings_window"
+        app:layout_constraintStart_toStartOf="@+id/settings_window"
+        app:layout_constraintEnd_toEndOf="@+id/settings_window"
+        app:layout_constraintBottom_toBottomOf="@+id/settings_window">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings"
+            android:fontFamily="@font/orange_juice"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            app:layout_constraintTop_toTopOf="@+id/action_bar"
+            app:layout_constraintStart_toStartOf="@+id/action_bar"
+            app:layout_constraintEnd_toEndOf="@+id/action_bar"
+            app:layout_constraintBottom_toBottomOf="@+id/action_bar"/>
+
+        <ImageView
+            android:id="@+id/signoutBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_signoutt"
+            app:layout_constraintHorizontal_bias=".95"
+            app:layout_constraintTop_toTopOf="@+id/action_bar"
+            app:layout_constraintStart_toStartOf="@+id/action_bar"
+            app:layout_constraintEnd_toEndOf="@+id/action_bar"
+            app:layout_constraintBottom_toBottomOf="@+id/action_bar"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/background_img"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:src="@drawable/login_registration_background"
+        android:scaleType="centerCrop"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintlayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        app:layout_constraintHeight_percent=".9"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/page_viewer_bg">
+
+        <TextView
+            android:id="@+id/generalTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="General"
+            app:layout_constraintVertical_bias=".02"
+            app:layout_constraintHorizontal_bias=".02"
+            app:layout_constraintTop_toTopOf="@id/constraintlayout"
+            app:layout_constraintBottom_toBottomOf="@id/constraintlayout"
+            app:layout_constraintStart_toStartOf="@id/constraintlayout"
+            app:layout_constraintEnd_toEndOf="@id/constraintlayout"/>
+
+        <Button
+            android:id="@+id/helpBtn"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:text="Help"
+            android:textAlignment="textStart"
+            android:textSize="18dp"
+            android:textAllCaps="false"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/ic_help"
+            android:drawablePadding="10dp"
+            android:paddingLeft="5dp"
+            app:layout_constraintVertical_bias=".02"
+            app:layout_constraintTop_toBottomOf="@+id/generalTxt"
+            app:layout_constraintBottom_toBottomOf="@id/constraintlayout"
+            app:layout_constraintStart_toStartOf="@id/constraintlayout"
+            app:layout_constraintEnd_toEndOf="@id/constraintlayout" />
+
+        <TextView
+            android:id="@+id/securityTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Security"
+            app:layout_constraintVertical_bias=".02"
+            app:layout_constraintHorizontal_bias=".02"
+            app:layout_constraintTop_toBottomOf="@+id/helpBtn"
+            app:layout_constraintBottom_toBottomOf="@id/constraintlayout"
+            app:layout_constraintStart_toStartOf="@id/constraintlayout"
+            app:layout_constraintEnd_toEndOf="@id/constraintlayout"/>
+
+        <Button
+            android:id="@+id/securityOptionsBtn"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:text="Security Options"
+            android:textSize="18dp"
+            android:textAllCaps="false"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/ic_security"
+            android:textAlignment="textStart"
+            android:paddingLeft="10dp"
+            android:drawablePadding="10dp"
+            app:layout_constraintVertical_bias=".02"
+            app:layout_constraintTop_toBottomOf="@+id/securityTxt"
+            app:layout_constraintBottom_toBottomOf="@id/constraintlayout"
+            app:layout_constraintStart_toStartOf="@id/constraintlayout"
+            app:layout_constraintEnd_toEndOf="@id/constraintlayout" />
+
+        <TextView
+            android:id="@+id/fromTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From"
+            app:layout_constraintVertical_bias=".7"
+            app:layout_constraintTop_toBottomOf="@+id/securityOptionsBtn"
+            app:layout_constraintBottom_toBottomOf="@id/constraintlayout"
+            app:layout_constraintStart_toStartOf="@id/constraintlayout"
+            app:layout_constraintEnd_toEndOf="@id/constraintlayout"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="20sp"
+            android:fontFamily="@font/orange_juice"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintTop_toBottomOf="@+id/fromTxt"
+            app:layout_constraintBottom_toBottomOf="@id/constraintlayout"
+            app:layout_constraintStart_toStartOf="@id/constraintlayout"
+            app:layout_constraintEnd_toEndOf="@id/constraintlayout"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

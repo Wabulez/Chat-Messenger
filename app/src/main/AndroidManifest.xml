@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.chatmessenger">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_app_icon_round"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_app_icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".HelpPages.SecurityOptionsHelpPage"
+            android:exported="false" />
+        <activity
+            android:name=".UserAuthPage"
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name=".EditInfoPage"
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name=".MainActivityPages.ChatLog"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivityPages.MainActivity" />
+        </activity>
+        <activity
+            android:name=".MainActivityPages.Contacts"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivityPages.MainActivity" />
+        </activity>
+        <activity
+            android:name=".HelpPages.CallSupportHelpPage"
+            android:exported="false" />
+        <activity
+            android:name=".HelpPages.PaymentInquiresHelpPage"
+            android:exported="false" />
+        <activity
+            android:name=".HelpPages.CantLoginHelpPage"
+            android:exported="false" />
+        <activity
+            android:name=".FeedbackPage"
+            android:exported="false" />
+        <activity
+            android:name=".HelpPages.SigningUpHelpPage"
+            android:exported="false" />
+        <activity
+            android:name=".HelpPages.EditAccontInfoHelpPage"
+            android:exported="false" />
+        <activity
+            android:name=".HelpPages.HelpPage"
+            android:exported="false" />
+        <activity
+            android:name=".LoginSignUpPages.SelectProfPic"
+            android:exported="false" />
+        <activity
+            android:name=".ForgotPassword"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginSignUpPages.LoginSignUpParent"
+            android:exported="true"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name=".MainActivityPages.MainActivity" />
+    </application>
+
+</manifest>

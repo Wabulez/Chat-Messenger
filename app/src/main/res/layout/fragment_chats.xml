@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/chats_window"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivityPages.ChatsFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/action_bar"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent=".07"
+            android:elevation="4dp"
+            android:background="@drawable/actionbar_bg"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintTop_toTopOf="@+id/chats_window"
+            app:layout_constraintStart_toStartOf="@+id/chats_window"
+            app:layout_constraintEnd_toEndOf="@+id/chats_window"
+            app:layout_constraintBottom_toBottomOf="@+id/chats_window">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chats"
+                android:fontFamily="@font/orange_juice"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                app:layout_constraintTop_toTopOf="@+id/action_bar"
+                app:layout_constraintStart_toStartOf="@+id/action_bar"
+                app:layout_constraintEnd_toEndOf="@+id/action_bar"
+                app:layout_constraintBottom_toBottomOf="@+id/action_bar"/>
+
+            <ImageView
+                android:id="@+id/signoutBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_signoutt"
+                app:layout_constraintHorizontal_bias=".95"
+                app:layout_constraintTop_toTopOf="@+id/action_bar"
+                app:layout_constraintStart_toStartOf="@+id/action_bar"
+                app:layout_constraintEnd_toEndOf="@+id/action_bar"
+                app:layout_constraintBottom_toBottomOf="@+id/action_bar"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/open_contacts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_contacts"
+        android:elevation="4dp"
+        app:layout_constraintHorizontal_bias=".9"
+        app:layout_constraintVertical_bias=".8"
+        app:layout_constraintTop_toBottomOf="@id/action_bar"
+        app:layout_constraintStart_toStartOf="@id/chats_window"
+        app:layout_constraintEnd_toEndOf="@+id/chats_window"
+        app:layout_constraintBottom_toBottomOf="@+id/chats_window"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintlayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        app:layout_constraintHeight_percent=".9"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/page_viewer_bg">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/chats_recyclerView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toTopOf="@id/constraintlayout"
+            app:layout_constraintStart_toStartOf="@id/constraintlayout"
+            app:layout_constraintEnd_toEndOf="@+id/constraintlayout"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintlayout"/>
+
+        <TextView
+            android:id="@+id/chats_noticeMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/light_grey"
+            app:layout_constraintTop_toTopOf="@id/chats_recyclerView"
+            app:layout_constraintStart_toStartOf="@id/chats_recyclerView"
+            app:layout_constraintEnd_toEndOf="@+id/chats_recyclerView"
+            app:layout_constraintBottom_toBottomOf="@+id/chats_recyclerView"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

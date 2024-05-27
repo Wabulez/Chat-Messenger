@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/user_row_layout"
+    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/user_msg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:maxWidth="200dp"
+        app:layout_constraintWidth_percent=".7"
+        app:layout_constraintHorizontal_bias=".98"
+        android:text="This is my message that will wrap into multiple lines and just keep on going"
+        android:textColor="@color/black"
+        android:background="@drawable/user_row_bg"
+        app:layout_constraintBottom_toBottomOf="@id/user_row_layout"
+        app:layout_constraintEnd_toEndOf="@id/user_row_layout"
+        app:layout_constraintStart_toStartOf="@id/user_row_layout"
+        app:layout_constraintTop_toTopOf="@id/user_row_layout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

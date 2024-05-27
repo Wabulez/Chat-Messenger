@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/edit_info_window"
+    tools:context=".EditInfoPage">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent=".07"
+        android:elevation="4dp"
+        android:background="@drawable/actionbar_bg"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintTop_toTopOf="@+id/edit_info_window"
+        app:layout_constraintStart_toStartOf="@+id/edit_info_window"
+        app:layout_constraintEnd_toEndOf="@+id/edit_info_window"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_info_window">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Profile"
+            android:fontFamily="@font/orange_juice"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            app:layout_constraintTop_toTopOf="@+id/action_bar"
+            app:layout_constraintStart_toStartOf="@+id/action_bar"
+            app:layout_constraintEnd_toEndOf="@+id/action_bar"
+            app:layout_constraintBottom_toBottomOf="@+id/action_bar"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintlayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        app:layout_constraintHeight_percent=".9"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/page_viewer_bg">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/page_action_bar"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent=".07"
+            android:elevation="4dp"
+            android:background="@drawable/page_viewer_bg"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintTop_toTopOf="@+id/constraintlayout"
+            app:layout_constraintStart_toStartOf="@+id/constraintlayout"
+            app:layout_constraintEnd_toEndOf="@+id/constraintlayout"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintlayout">
+
+            <ImageView
+                android:id="@+id/backbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_back"
+                app:layout_constraintHorizontal_bias=".03"
+                app:layout_constraintBottom_toBottomOf="@+id/page_action_bar"
+                app:layout_constraintEnd_toEndOf="@+id/page_action_bar"
+                app:layout_constraintStart_toStartOf="@+id/page_action_bar"
+                app:layout_constraintTop_toTopOf="@+id/page_action_bar"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit Information"
+                android:textSize="25sp"
+                android:fontFamily="sans-serif-thin"
+                android:textStyle="bold"
+                android:textColor="@color/appIconColour"
+                app:layout_constraintTop_toTopOf="@+id/page_action_bar"
+                app:layout_constraintStart_toStartOf="@+id/page_action_bar"
+                app:layout_constraintEnd_toEndOf="@+id/page_action_bar"
+                app:layout_constraintBottom_toBottomOf="@+id/page_action_bar"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintHeight_percent=".9"
+            app:layout_constraintTop_toBottomOf="@id/page_action_bar"
+            app:layout_constraintStart_toStartOf="@+id/constraintlayout"
+            app:layout_constraintEnd_toEndOf="@+id/constraintlayout"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintlayout">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/page_content"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+                <Button
+                    android:id="@+id/select_photo"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/select_photo_bg"
+                    android:text="+"
+                    android:textColor="@color/white"
+                    android:textAllCaps="false"
+                    android:textSize="80sp"
+                    app:layout_constraintVertical_bias=".05"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/selected_img"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    app:layout_constraintVertical_bias=".05"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/profPic_status"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="(Profile picture will remain the same if left blank)"
+                    app:layout_constraintWidth_percent=".8"
+                    app:layout_constraintVertical_bias=".1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/selected_img"/>
+
+                <EditText
+                    android:id="@+id/editInfo_user_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintWidth_percent=".8"
+                    app:layout_constraintVertical_bias=".2"
+                    app:layout_constraintHorizontal_bias=".5"
+                    android:background="@drawable/edt_bg"
+                    android:textColor="@color/appIconColour"
+                    android:inputType="text"
+                    android:hint="Name"
+                    android:padding="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:drawableLeft="@drawable/ic_baseline_person_24"
+                    android:drawablePadding="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/selected_img" />
+
+                <EditText
+                    android:id="@+id/editInfo_user_email"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintWidth_percent=".8"
+                    app:layout_constraintVertical_bias=".02"
+                    app:layout_constraintHorizontal_bias=".5"
+                    android:background="@drawable/edt_bg"
+                    android:textColor="@color/appIconColour"
+                    android:inputType="textEmailAddress"
+                    android:hint="Email"
+                    android:padding="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:drawableLeft="@drawable/ic_baseline_email_24"
+                    android:drawablePadding="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editInfo_user_name" />
+
+                <EditText
+                    android:id="@+id/editInfo_user_number"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintWidth_percent=".8"
+                    app:layout_constraintVertical_bias=".02"
+                    app:layout_constraintHorizontal_bias=".5"
+                    android:background="@drawable/edt_bg"
+                    android:textColor="@color/appIconColour"
+                    android:inputType="phone"
+                    android:hint="Phone Number"
+                    android:padding="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:drawableLeft="@drawable/ic_baseline_phone_24"
+                    android:drawablePadding="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/editInfo_user_email" />
+
+                <EditText
+                    android:id="@+id/editInfo_user_password"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintWidth_percent=".8"
+                    app:layout_constraintVertical_bias=".02"
+                    app:layout_constraintHorizontal_bias=".5"
+                    android:background="@drawable/edt_bg"
+                    android:textColor="@color/appIconColour"
+                    android:inputType="textPassword"
+                    android:hint="Password"
+                    android:padding="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:drawableLeft="@drawable/ic_baseline_lock_24"
+                    android:drawablePadding="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editInfo_user_number" />
+
+                <Button
+                    android:id="@+id/updateInfoBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintWidth_percent=".8"
+                    app:layout_constraintVertical_bias=".2"
+                    android:text="Update Information"
+                    android:textSize="16sp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:background="@drawable/rounded_btn_bg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/editInfo_user_password"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintWidth_percent=".8"
+                    android:text="Please leave anything you would like to remain unchanged blank"
+                    android:textStyle="italic"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/editInfo_user_password"/>
+
+                <TextView
+                    android:id="@+id/fromTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="From"
+                    app:layout_constraintVertical_bias=".5"
+                    app:layout_constraintTop_toBottomOf="@+id/updateInfoBtn"
+                    app:layout_constraintBottom_toBottomOf="@id/page_content"
+                    app:layout_constraintStart_toStartOf="@id/page_content"
+                    app:layout_constraintEnd_toEndOf="@id/page_content"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/orange_juice"
+                    app:layout_constraintVertical_bias="0"
+                    android:layout_marginBottom="60dp"
+                    app:layout_constraintTop_toBottomOf="@+id/fromTxt"
+                    app:layout_constraintBottom_toBottomOf="@id/page_content"
+                    app:layout_constraintStart_toStartOf="@id/page_content"
+                    app:layout_constraintEnd_toEndOf="@id/page_content"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

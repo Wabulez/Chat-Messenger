@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_registration_background"
+    android:id="@+id/chat_log_window"
+    tools:context=".MainActivityPages.ChatLog">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent=".08"
+        android:elevation="4dp"
+        android:background="@drawable/chat_log_actionbar_bg"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintTop_toTopOf="@+id/chat_log_window"
+        app:layout_constraintStart_toStartOf="@+id/chat_log_window"
+        app:layout_constraintEnd_toEndOf="@+id/chat_log_window"
+        app:layout_constraintBottom_toBottomOf="@+id/chat_log_window">
+
+        <ImageView
+            android:id="@+id/backbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_back"
+            app:layout_constraintHorizontal_bias=".02"
+            app:layout_constraintTop_toTopOf="@+id/action_bar"
+            app:layout_constraintStart_toStartOf="@+id/action_bar"
+            app:layout_constraintEnd_toEndOf="@+id/action_bar"
+            app:layout_constraintBottom_toBottomOf="@+id/action_bar"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/prof_pic_chat_log"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintHorizontal_bias=".02"
+            app:layout_constraintTop_toTopOf="@+id/action_bar"
+            app:layout_constraintStart_toEndOf="@id/backbtn"
+            app:layout_constraintEnd_toEndOf="@+id/action_bar"
+            app:layout_constraintBottom_toBottomOf="@+id/action_bar"/>
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:textSize="20sp"
+            android:textColor="@color/light_grey"
+            app:layout_constraintHorizontal_bias=".05"
+            app:layout_constraintTop_toTopOf="@+id/action_bar"
+            app:layout_constraintStart_toEndOf="@id/prof_pic_chat_log"
+            app:layout_constraintEnd_toEndOf="@+id/action_bar"
+            app:layout_constraintBottom_toBottomOf="@+id/action_bar"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chat_log_recycleView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/login_registration_background"
+        app:layout_constraintBottom_toTopOf="@+id/edtMessage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/action_bar" />
+
+    <EditText
+        android:id="@+id/edtMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Message"
+        android:textColorHint="@color/light_grey"
+        android:textColor="@color/light_grey"
+        android:padding="10dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:background="@drawable/edt_chatog_bg"
+        app:layout_constraintWidth_percent=".7"
+        app:layout_constraintVertical_bias=".99"
+        app:layout_constraintHorizontal_bias=".2"
+        app:layout_constraintTop_toTopOf="@+id/chat_log_window"
+        app:layout_constraintStart_toStartOf="@id/chat_log_window"
+        app:layout_constraintEnd_toStartOf="@id/sendBtn"
+        app:layout_constraintBottom_toBottomOf="@id/chat_log_window"/>
+
+    <Button
+        android:id="@+id/sendBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent=".25"
+        android:text="Send"
+        android:textSize="15sp"
+        android:fontFamily="monospace"
+        android:drawableRight="@drawable/ic_send"
+        android:paddingRight="10dp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:background="@drawable/edt_chatog_bg"
+        app:layout_constraintVertical_bias=".99"
+        app:layout_constraintTop_toTopOf="@+id/chat_log_window"
+        app:layout_constraintStart_toEndOf="@id/edtMessage"
+        app:layout_constraintEnd_toEndOf="@id/chat_log_window"
+        app:layout_constraintBottom_toBottomOf="@id/chat_log_window"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
